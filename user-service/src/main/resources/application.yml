@@ -1,0 +1,25 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://registry:8761/eureka/
+
+
